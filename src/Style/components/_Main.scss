@@ -1,0 +1,14 @@
+.Main{
+    background: rgb(172, 169, 169);
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    letter-spacing: .05rem;
+    grid-area: main;
+    display: inline-block;
+    width:100%;
+    max-height: 100vh;
+    overflow-Y: scroll;
+}
