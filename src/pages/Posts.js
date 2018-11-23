@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import Blog from './presentation';
 import Blog1 from './blog1';
+import {connect} from 'react-redux';
 
 class Posts extends Component {
 
     render(){
-        switch (this.props.store.getState()){
+        switch (this.props.activePost.activePost){
             case 'Blog':
                 return(
                     <div>
-                         {this.props.store.getState()}
                         <Blog/>
                     </div>
                     )
             case 'Blog1':
                 return(
                     <div>
-                        {this.props.store.getState()}
                         <Blog1/>
                     </div>
                     )
@@ -28,4 +27,11 @@ class Posts extends Component {
     
 };
 
-export default Posts;
+
+function mapStateToProps(state){
+    return{
+        activePost: state.activePost
+    };
+}
+
+export default connect(mapStateToProps)(Posts);

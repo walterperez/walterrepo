@@ -9,22 +9,26 @@ import rootReducer from './reducers/index.js'
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+/*
 const initialState = {
     ListWebs : [
-      {name:'Blog',state:false},
-      {name:'Blog1',state:true}
-    ]
+      {name:'Blog'},
+      {name:'Blog1'}
+    ],
+    activePost : 'Blog'
   };
+*/
 
-const store = createStore(rootReducer,initialState)
+const store = createStore(rootReducer)
 
-const render = ()=>{ return (
-    ReactDOM.render(
-    <Provider store={store}>
-        <App store={store}/>
-    </Provider>
-, document.getElementById('root')))
+const render = ()=>{ 
+    return (
+        ReactDOM.render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        , document.getElementById('root'))
+    )
 };
 
 // If you want your app to work offline and load faster, you can change

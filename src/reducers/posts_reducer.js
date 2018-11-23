@@ -10,9 +10,16 @@ function findIndex(array,string) {
   return index;
 }
 
-const posts_reducer = (state={}, action) => {
+const initialState= {
+  ListWebs : [
+    {name:'Blog'},
+    {name:'Blog1'}
+  ]
+};
+
+const posts_reducer = (state=initialState, action) => {
     switch (action.type) {
-      case 'CLICK_POST':
+      case 'LIST_POSTS':
         return [
           ...state,
           state.ListWebs.map((item)=>{
