@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch) => {
 function mapStateToProps(state) {
 return {
   ListWebs: state.ListWebs,
-  Hamburguer: state.HamburguerButton
+  Hamburguer: state.Hamburguer
 };
 }
 

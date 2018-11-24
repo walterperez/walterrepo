@@ -39,7 +39,7 @@ class Hamburguer extends Component {
 
   function mapStateToProps(state){
     return{
-        Hamburguer: state.HamburgerButton
+        Hamburguer: state.Hamburguer
     };
 }
   
