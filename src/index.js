@@ -9,17 +9,8 @@ import rootReducer from './reducers/index.js'
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-/*
-const initialState = {
-    ListWebs : [
-      {name:'Blog'},
-      {name:'Blog1'}
-    ],
-    activePost : 'Blog'
-  };
-*/
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer,{},window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 const render = ()=>{ 
     return (

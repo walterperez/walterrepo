@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <SideBar />
-        <Main store={this.props.store}/>
+        <Main/>
       </div>
     );
   }

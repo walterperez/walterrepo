@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Blog extends Component {
-    render() {
+const Blog = () => {
+
         return (
             <div className="Blog" >
                 <h1>Lorem Ipsum</h1>
@@ -12,8 +12,6 @@ class Blog extends Component {
                 </p>
             </div>
         )
-    }
-
 }
 
 export default Blog;

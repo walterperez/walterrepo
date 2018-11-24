@@ -1,10 +1,12 @@
 
 const activePosts_reducer = (state={activePost:'Blog'}, action) => {
     switch (action.type) {
-      case 'CHANGE_ACTUAL_POST':
-        return {
-          ...state.activePost = action.postName 
-        }
+      case 'CLICK_POST':
+        return (
+        Object.assign({}, state, {
+          activePost : action.name
+        }))
+
       default:
         return state
     }

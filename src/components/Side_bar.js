@@ -1,30 +1,44 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import {clickPost} from '../actions/index';
+
 class SideBar extends Component {
 
-    createList(){
-      return this.props.ListWebs.ListWebs.map(post=>{
-        return (
-          <li key={post.name}>{post.name}</li>
-        )
-      })
-    }
-
-    render() {
-      return (
-        <div className="Side_bar">
-          <ul>
-            {this.createList()}
-          </ul>
-        </div>
-      );
-    }
+  changeActualPage() {
+    this.props.changePost()
   }
 
-  function mapStateToProps(state){
-    return{
-        ListWebs: state.ListWebs
-    };
+  createList() {
+    return this.props.ListWebs.ListWebs.map(post => {
+      return (
+        <li key={post.name} onClick={()=>{this.changeActualPage(post.name)}}>{post.name}</li>
+      )
+    })
+  }
+
+  render() {
+    return (
+      <div className="Side_bar">
+        <ul>
+          {this.createList()}
+        </ul>
+      </div>
+    );
+  }
 }
-  
-  export default connect(mapStateToProps)(SideBar);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changePost: (name)=>{
+      dispatch(clickPost(name))
+    }
+  }
+};
+
+function mapStateToProps(state) {
+  return {
+    ListWebs: state.ListWebs
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
