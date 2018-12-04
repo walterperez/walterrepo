@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Posts from '../pages/Posts';
+import Posts from './Posts';
 class Main extends Component {
     
     render() {

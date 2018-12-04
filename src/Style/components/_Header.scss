@@ -13,8 +13,10 @@
     height: 100%;
     min-height: 80px;
 
-    .Header_Logo{
-        font-size: 1.3rem; 
+    .Header__Logo{
+        position: absolute;
+        font-size: 1.3rem;
+        left:calc(30px + 1rem + 1.5rem);
     }
 }
 

@@ -20,4 +20,3 @@ const hamburguer_reducer = (state=initialState,action={}) => {
   }
 }
 export default hamburguer_reducer
-  
