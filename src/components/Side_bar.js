@@ -26,7 +26,7 @@ class SideBar extends Component {
   createList() {
     return this.props.ListWebs.ListWebs.map(post => {
       return (
-        <li style={{ cursor: "pointer" }} key={post.name} onClick={() => { this.changeActualPage(post.name) }}>{post.name}</li>
+        <li  key={post.name} onClick={() => { this.changeActualPage(post.name) }}>{post.postName}</li>
       )
     })
   }
