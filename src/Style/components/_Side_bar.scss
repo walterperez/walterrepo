@@ -1,6 +1,6 @@
 .Side_bar {
-    background: linear-gradient(rgb(43, 41, 41),rgb(65, 64, 64));
-    color: beige;
+    background: rgb(36, 41, 46);
+    color: rgb(246, 248, 250);
     grid-area: nav-bar;
     display: inline-block;
     min-width: 100px;
@@ -13,6 +13,9 @@
     font-size: 1.2rem;
     overflow-y: scroll;
     margin: 0;
+
+
+
     ul{
         list-style: none;
         margin: 0;
@@ -24,21 +27,23 @@
             float: left;
             cursor: pointer;
             border-bottom: 2px solid grey;
-            margin-top:0.2rem;
+            border-top: 2px solid #333;
+            margin-top:0.5rem;
             padding-bottom :0.2rem;
             border-radius: 5px;
 
             &:hover {
-                color: goldenrod;
-                border-bottom: 2px solid goldenrod;
-                background: rgb(63, 60, 60);
+                color: rgb(84, 151, 228);
+                border-bottom: 2px solid grey;
+                background: rgb(43, 49, 55);
+
             }
 
             &:active {
                 padding-top:0.1rem;
                 background: rgb(34, 31, 31);
                 text-shadow: 0 -1px 0px rgba(48, 35, 2, 0.699);
-                border-bottom: 1px solid goldenrod;
+                border-bottom: 1px solid rgb(3, 102, 214);
 
             }
         }

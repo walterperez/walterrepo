@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fir-basic-test"
+  },
+  "targets": {
+    "fir-basic-test": {
+      "hosting": {
+        "en": [
+          "fir-basic-test"
+        ]
+      }
+    }
+  }
+}

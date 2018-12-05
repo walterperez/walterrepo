@@ -5,7 +5,9 @@ class Main extends Component {
     render() {
       return (
         <div className="Main">
+          <div className="Main__content">
             <Posts store={this.props.store}/>
+          </div>
         </div>
       );
     }
