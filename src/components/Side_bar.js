@@ -8,9 +8,7 @@ import {connect} from 'react-redux';
 // library.add(faEnvelope, faHandPointRight, faInfoCircle,faCoffee);
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHandPointRight,faInfoCircle} from '@fortawesome/free-solid-svg-icons';
-
- 
+import {faHandPointRight,faInfoCircle,faFileAlt,faWrench,faShoppingCart,faCameraRetro,faPenNib,faAt,faBalanceScale} from '@fortawesome/free-solid-svg-icons';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -34,13 +32,49 @@ class SideBar extends Component {
     this.props.changePost(name)
   }
 
+  importIcon(iconName) {
+    switch (iconName){
+    case  'faHandPointRight' : {
+      return <FontAwesomeIcon icon={faHandPointRight} size='sm'/>
+    }
+    case  'faFileAlt' : {
+      return <FontAwesomeIcon icon={faFileAlt} size='sm'/>
+    }
+    case  'faInfoCircle' : {
+      return <FontAwesomeIcon icon={faInfoCircle} size='sm'/>
+    }
+    case  'faWrench' : {
+      return <FontAwesomeIcon icon={faWrench} size='sm'/>
+    }
+    case  'faShoppingCart' : {
+      return <FontAwesomeIcon icon={faShoppingCart} size='sm'/>
+    }
+    case  'faCameraRetro' : {
+      return <FontAwesomeIcon icon={faCameraRetro} size='sm'/>
+    }
+    case  'faPenNib' : {
+      return <FontAwesomeIcon icon={faPenNib} size='sm'/>
+    }
+    case  'faAt' : {
+      return <FontAwesomeIcon icon={faAt} size='sm'/>
+    }
+    case  'faBalanceScale' : {
+      return <FontAwesomeIcon icon={faBalanceScale} size='sm'/>
+    }
+
+    default :
+      return (null);
+    }
+  }
+
   createList() {
     return this.props.ListWebs.ListWebs.map(post => {
+      let icon = this.importIcon(post.icon);
       return (
         <li  key={post.name} onClick={() => { this.changeActualPage(post.name) }}>
-        <FontAwesomeIcon icon={post.icon} 
-        size="sm"/>
-        {post.postName}</li>
+        {icon}
+        {post.postName}
+        </li>
       )
     })
   }
