@@ -6,7 +6,7 @@ import Header from './components/Header';
 import SideBar from './components/Side_bar';
 import Main from './components/Main';
 import { connect } from 'react-redux';
-import './Style/bootstrap4/bootstrap.min.css';
+//import './Style/bootstrap4/bootstrap.min.css';
 import './Style/style.scss';
 
 class App extends Component {
@@ -19,7 +19,6 @@ class App extends Component {
   };  
 
   render() {
-    console.log(this.state.style2)
     return (
       <div className="App" style={ this.props.Hamburguer.Hamburguer? {} : { gridTemplateAreas: this.state.style2}}>
         <Header />

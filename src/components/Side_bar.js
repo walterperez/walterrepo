@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-//font awesome
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faEnvelope, faHandPointRight, faInfoCircle,faCoffee } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
-// library.add(faEnvelope, faHandPointRight, faInfoCircle,faCoffee);
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHandPointRight,faInfoCircle,faFileAlt,faWrench,faShoppingCart,faCameraRetro,faPenNib,faAt,faBalanceScale} from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +14,8 @@ const mapDispatchToProps = (dispatch) => {
 function mapStateToProps(state) {
 return {
   ListWebs: state.ListWebs,
-  Hamburguer: state.Hamburguer
+  Hamburguer: state.Hamburguer,
+  activePost: state.activePost
 };
 }
 
@@ -71,9 +65,15 @@ class SideBar extends Component {
     return this.props.ListWebs.ListWebs.map(post => {
       let icon = this.importIcon(post.icon);
       return (
-        <li  key={post.name} onClick={() => { this.changeActualPage(post.name) }}>
-        {icon}
-        {post.postName}
+        this.props.activePost.activePost === post.name ?          
+        <li key={post.name} className={'clicked'} onClick={() => { this.changeActualPage(post.name) }}>
+          {icon}
+          {post.postName}
+        </li>
+        :
+        <li key={post.name} onClick={() => { this.changeActualPage(post.name) }}>
+          {icon}
+          {post.postName}
         </li>
       )
     })

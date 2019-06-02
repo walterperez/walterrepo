@@ -1,0 +1,80 @@
+/*Tablets and Desktops*/
+@media only screen and (min-width: 768px){
+
+}
+
+/*Phones*/
+@media only screen and (max-width: 767px){
+
+    .App{
+        grid-template-areas:  "header"
+                              "main";
+        overflow: hidden;
+    }
+
+    .Side_bar {
+        display: block;
+        width: 70vw;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        bottom: 0;
+        z-index: 99;
+    }
+
+    .Main {
+        .Main__content {
+            width: 95%;
+            min-height: 100vh   ;
+            margin: 3px auto 3px auto;
+
+            div {
+                .Blog {
+                    .img{
+                        width: 100%;
+                        min-height: 100%;
+                    }
+
+                    .Blog_title {
+                        background: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        p{
+                            display: none
+                        }
+                        h2{
+                            display: none
+                        }
+                        h3{
+                            display: none
+                        }
+                    }
+                }
+
+                #About {
+                    .About__photo {
+                        width: 30vw;
+                        height: 30vw;
+                    }
+                }
+
+                #MyProjects {
+                    .MyProjects__Project{
+                        .MyProjects_Project__PhotoList{
+                            .MyProjects__Project__list{
+                                p {
+                                    padding-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Photrait phones*/
+@media only screen and (max-width: 767px ) and (orientation: potrait){
+
+}

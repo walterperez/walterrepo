@@ -1,0 +1,23 @@
+//Colors for gradients
+$cfg-0: #0f2027;
+$cfg-1: #1b3946;
+$cfg-2: #132b35;
+// $cfg-0: #2b2929;
+// $cfg-2: #434343;
+
+//Fonts
+$font-0: "calisto-mt";
+
+//Gradients
+// $gradient-0:linear-gradient($cfg-0,$cfg-2);
+// $gradient-1: linear-gradient($cfg-2,$cfg-0);
+// $gradient-2: radial-gradient($cfg-2,$cfg-0);
+
+$gradient-0: $cfg-0;
+$gradient-1: $cfg-1;
+$gradient-2: $cfg-2;
+
+//Colors
+$color-0: rgba(87, 153, 57, 0.507);
+$color-1: $gradient-0;
+$color-2: $gradient-1;

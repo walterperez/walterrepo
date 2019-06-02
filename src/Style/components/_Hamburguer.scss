@@ -1,19 +1,19 @@
 .Hamburguer{
-    display: block;
+    display: inline-block;
     width:30px;
     height: 30px;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    margin-left: 1rem;
-    float: left;
 
     .Hamburguer__icon {
         position: relative;
         width: 100%;
         height: 100%;
-        color: beige;
+        color: rgb(236, 236, 236);
         background: transparent;
+        transition: all .2s;
+
 
         .Hamburguer__icon__line {
             width: 100%;
@@ -24,20 +24,64 @@
         }
 
         :active{
-            color: rgb(167, 126, 25);
-            box-shadow: inset 0 0 2px black;
             cursor: pointer;
         }
     }
 
     :hover{
-        color: goldenrod;
+        color: rgb(84, 151, 202);
         cursor: pointer;
     }
     
     :active .Hamburguer__icon__line{
-        color: rgb(167, 126, 25);
+        color: rgb(56, 116, 161);
         box-shadow: inset 0 0 1px black;
         cursor: pointer;
     }
+
+
+}
+
+
+.Active{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    .Hamburguer__icon {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        color: rgb(206, 255, 196);
+        background: transparent;
+        transition: all .2s;
+
+
+        .Hamburguer__icon__line {
+            width: 100%;
+            height: 5px;
+            border-radius: 3px;
+            margin-bottom: 3px;
+            background: currentColor;
+        }
+
+        :active{
+            cursor: pointer;
+        }
+    }
+
+    :hover{
+        color: rgb(84, 151, 202);
+        cursor: pointer;
+    }
+    
+    :active .Hamburguer__icon__line{
+        color: rgb(56, 116, 161);
+        box-shadow: inset 0 0 1px black;
+        cursor: pointer;
+    }
+
 }

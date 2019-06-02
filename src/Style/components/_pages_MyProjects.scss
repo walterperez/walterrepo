@@ -1,0 +1,49 @@
+.MyProjects {
+  .MyProjects__Project {
+    .MyProjects__Project__title {
+      margin-bottom: 1rem;
+    }
+
+    .MyProjects_Project__PhotoList {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      MyProjects_Project__img {
+        flex: 1;
+        img {
+          width: 100%;
+          height: auto;
+          display: inline-block;
+        }
+      }
+      .MyProjects__Project__list {
+        flex: 1;
+        display: inline-block;
+
+        .MyProjects__Project__list__item {
+          display: flex;
+          align-items: center;
+          margin-left: 1rem;
+          color: rgb(49, 49, 49);
+          font-size: 0.9rem;
+        }
+      }
+
+      .MyProjects__Project__description {
+        width: 50%;
+        margin: 1rem 0;
+        padding: 0;
+        justify-content: end;
+
+        p {
+          text-align: start;
+          width: 60%;
+          margin: 0 auto;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

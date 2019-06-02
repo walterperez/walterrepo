@@ -1,5 +1,5 @@
 const initialState= {
-  Hamburguer: true
+  Hamburguer: false
 };
 
 const hamburguer_reducer = (state=initialState,action={}) => {

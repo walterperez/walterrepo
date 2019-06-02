@@ -1,51 +1,50 @@
 .Side_bar {
-    background: rgb(36, 41, 46);
-    color: rgb(246, 248, 250);
-    grid-area: nav-bar;
-    display: inline-block;
-    min-width: 100px;
-    max-width: 250px;
-    width: 100%;
-    max-height: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    overflow-y: scroll;
+  background: $cfg-0;
+  color: rgb(246, 248, 250);
+  grid-area: nav-bar;
+  display: inline-block;
+  min-width: 100px;
+  max-width: 250px;
+  width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  overflow-y: scroll;
+  margin: 0;
+  transition: all 0.2s;
+
+  .clicked {
+    color: rgb(206, 255, 196);
+    background: $gradient-2;
+  }
+
+  ul {
+    list-style: none;
     margin: 0;
+    padding: 0;
 
+    li {
+      box-sizing: border-box;
 
+      width: 100%;
+      display: block;
+      float: left;
+      cursor: pointer;
+      padding-bottom: 0.2rem;
+      background: $gradient-0;
+      transition: all 0.2s;
+      padding: 1em;
 
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        
-        li{
-            width: 100%;
-            display: block;
-            float: left;
-            cursor: pointer;
-            border-bottom: 2px solid grey;
-            border-top: 2px solid #333;
-            margin-top:0.5rem;
-            padding-bottom :0.2rem;
-            border-radius: 5px;
+      &:hover {
+        color: rgb(84, 151, 228);
+        background: $cfg-2;
+      }
 
-            &:hover {
-                color: rgb(84, 151, 228);
-                border-bottom: 2px solid grey;
-                background: rgb(43, 49, 55);
-
-            }
-
-            &:active {
-                padding-top:0.1rem;
-                background: rgb(34, 31, 31);
-                text-shadow: 0 -1px 0px rgba(48, 35, 2, 0.699);
-                border-bottom: 1px solid rgb(3, 102, 214);
-
-            }
-        }
+      &:active {
+        background: $cfg-1;
+      }
     }
+  }
 }

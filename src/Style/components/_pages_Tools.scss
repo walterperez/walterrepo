@@ -1,0 +1,46 @@
+.Tools {
+
+    .Tools__container{
+
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        margin-top: 1rem;
+
+        .Tools__container__item{
+            max-width: 50%;
+            display: inline-block;
+
+            .Tools__subtitle--front{
+
+            }
+
+            .Tools__subtitle--front__list{
+
+                .Tools__subtitle--front__list__item{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1rem;
+                    color: rgb(49, 49, 49);
+                    font-size: 0.9rem;
+                }
+            }
+        
+            .Tools__subtitle--back{
+                
+            }
+
+            .Tools__subtitle--back__list{
+
+                .Tools__subtitle--back__list__item{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 1rem;
+                    color: rgb(49, 49, 49);
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

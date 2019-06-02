@@ -14,7 +14,7 @@ class Hamburguer extends Component {
   
   render() {
       return (
-        <div className="Hamburguer" onClick={()=>{this.handleClick()}}>
+        <div onClick={()=>{this.handleClick()}} className={this.props.Hamburguer.Hamburguer===true?'Active':'Hamburguer'} >
             <div className="Hamburguer__icon">
               <div className="Hamburguer__icon__line"></div>
               <div className="Hamburguer__icon__line"></div>

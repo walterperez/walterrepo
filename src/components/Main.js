@@ -6,7 +6,7 @@ class Main extends Component {
       return (
         <div className="Main">
           <div className="Main__content">
-            <Posts store={this.props.store}/>
+            <Posts/>
           </div>
         </div>
       );

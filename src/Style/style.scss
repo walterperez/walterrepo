@@ -1,8 +1,25 @@
 /*HTML*/
 @import './components/HTML';
+@import './components/constants';
 /* COMPONENTS*/
 @import './components/App';
 @import './components/Header';
 @import './components/Hamburguer';
 @import './components/Side_bar';
 @import './components/Main';
+@import './components/Footer';
+/*Pages*/
+@import './components/pages_MyProjects';
+@import './components/pages_About';
+@import './components/pages_Tools';
+@import './components/pages_Photos';
+
+@import './components/pages_Welcome';
+@import './components/pages_Services';
+@import './components/pages_BrandDesigns';
+@import './components/pages_Contact';
+@import './components/pages_LegalAdvise';
+
+
+//Responsive Design
+ @import './components/Responsive'
